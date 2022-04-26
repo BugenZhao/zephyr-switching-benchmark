@@ -1,0 +1,17 @@
+diff --git a/boards/arm/rpi_pico/rpi_pico-pinctrl.dtsi b/boards/arm/rpi_pico/rpi_pico-pinctrl.dtsi
+index 97d743ceb3..5af03954cd 100644
+--- a/boards/arm/rpi_pico/rpi_pico-pinctrl.dtsi
++++ b/boards/arm/rpi_pico/rpi_pico-pinctrl.dtsi
+@@ -8,10 +8,10 @@
+ &pinctrl {
+        uart0_default: uart0_default {
+                group1 {
+-                       pinmux = <UART0_TX_P0>;
++                       pinmux = <UART0_TX_P16>;
+                };
+                group2 {
+-                       pinmux = <UART0_RX_P1>;
++                       pinmux = <UART0_RX_P17>;
+                        input-enable;
+                };
+        };
