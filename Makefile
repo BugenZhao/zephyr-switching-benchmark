@@ -6,3 +6,6 @@ emu:
 
 emu-run: emu
 	west build --build-dir build-emu -t run
+
+flash:
+	cp build/zephyr/zephyr.uf2 /Volumes/RPI-RP2/
