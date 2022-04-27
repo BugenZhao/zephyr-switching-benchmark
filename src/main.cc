@@ -4,6 +4,7 @@
 #include <zephyr.h>
 #include "fib.h"
 #include "preempt.h"
+#include "user_blinky.h"
 #include "xip.h"
 
 #define THREAD_STACKSIZE 2048
@@ -69,9 +70,26 @@ void main_preempt() {
                   K_MSEC(2000));
 }
 
+K_SEM_DEFINE(sem, 0, 1);
+void main_user_blinky() {
+  static const struct gpio_dt_spec led =
+      GPIO_DT_SPEC_GET(DT_ALIAS(led0), gpios);
+
+  k_thread_access_grant(&thread, &sem, led.port);
+  k_thread_create(&thread, thread_stack, THREAD_STACKSIZE,
+                  thread_function_user_blinky_on_sem, &sem, (void*)&led, NULL, -1,
+                  K_USER, K_NO_WAIT);
+
+  k_thread_access_grant(&thread_2, &sem);
+  k_thread_create(&thread_2, thread_2_stack, THREAD_STACKSIZE,
+                  thread_function_user_give_sem, &sem, NULL, NULL, 1, K_USER,
+                  K_MSEC(2000));
+}
+
 void main(void) {
   printf("Welcome, %s!\n\n", CONFIG_BOARD);
 
   // main_fib_bench();
-  main_preempt();
+  // main_preempt();
+  main_user_blinky();
 }

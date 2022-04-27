@@ -4,8 +4,8 @@
 #include <zephyr.h>
 
 void thread_function_blinky(void* p1, void* p2, void* p3) {
-#define LED0_NODE DT_ALIAS(led0)
-  static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
+  static const struct gpio_dt_spec led =
+      GPIO_DT_SPEC_GET(DT_ALIAS(led0), gpios);
 
   int ret = 0;
 
