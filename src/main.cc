@@ -14,17 +14,17 @@ K_THREAD_STACK_DEFINE(thread_stack, THREAD_STACKSIZE);
 struct k_thread thread_2;
 K_THREAD_STACK_DEFINE(thread_2_stack, THREAD_STACKSIZE);
 
-void stat(bool user, void* func, int times) {
+void stat(bool user, k_thread_entry_t func, int times) {
   while (times--) {
-    uint32_t user_option = user ? K_USER : 0;
+    auto user_option = user ? K_USER : 0;
 
-    int32_t cycle_start = sys_clock_cycle_get_32();
+    auto cycle_start = sys_clock_cycle_get_32();
 
     k_thread_create(&thread, thread_stack, THREAD_STACKSIZE, func, NULL, NULL,
                     NULL, -1, K_INHERIT_PERMS | user_option, K_NO_WAIT);
     k_thread_join(&thread, K_FOREVER);
 
-    uint32_t cycle_end = sys_clock_cycle_get_32();
+    auto cycle_end = sys_clock_cycle_get_32();
 
     printf("start %10u, end %10u => %10u\n\n", cycle_start, cycle_end,
            cycle_end - cycle_start);

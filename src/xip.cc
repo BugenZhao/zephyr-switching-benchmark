@@ -3,9 +3,9 @@
 
 void* const XIP_CTRL_BASE = (void*)0x14000000;
 
-volatile uint32_t* const XIP_CTRL = XIP_CTRL_BASE;
-volatile uint32_t* const XIP_CTR_HIT = XIP_CTRL_BASE + 0x0c;
-volatile uint32_t* const XIP_CTR_ACC = XIP_CTRL_BASE + 0x10;
+auto XIP_CTRL = (volatile uint32_t* const)XIP_CTRL_BASE;
+auto XIP_CTR_HIT = (volatile uint32_t* const)XIP_CTRL_BASE + 0x0c;
+auto XIP_CTR_ACC = (volatile uint32_t* const)XIP_CTRL_BASE + 0x10;
 
 void config_xip(bool enable) {
   printf("current xip ctrl: %x\n", *XIP_CTRL);
@@ -19,8 +19,8 @@ void config_xip(bool enable) {
 }
 
 void stat_xip_hit() {
-  uint32_t hit = *XIP_CTR_HIT;
-  uint32_t acc = *XIP_CTR_ACC;
+  auto hit = *XIP_CTR_HIT;
+  auto acc = *XIP_CTR_ACC;
 
   printf("xip cache stat: acc %10u, hit %10u\n", acc, hit);
 }
