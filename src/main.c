@@ -3,12 +3,16 @@
 #include <sys/sem.h>
 #include <zephyr.h>
 #include "fib.h"
+#include "preempt.h"
 #include "xip.h"
 
 #define THREAD_STACKSIZE 2048
 
 struct k_thread thread;
 K_THREAD_STACK_DEFINE(thread_stack, THREAD_STACKSIZE);
+
+struct k_thread thread_2;
+K_THREAD_STACK_DEFINE(thread_2_stack, THREAD_STACKSIZE);
 
 void stat(bool user, void* func, int times) {
   while (times--) {
@@ -55,8 +59,19 @@ void main_fib_bench() {
   }
 }
 
+void main_preempt() {
+  k_thread_create(&thread, thread_stack, THREAD_STACKSIZE,
+                  thread_function_blinky, NULL, NULL, NULL, -1, K_INHERIT_PERMS,
+                  K_NO_WAIT);
+
+  k_thread_create(&thread_2, thread_2_stack, THREAD_STACKSIZE,
+                  thread_function_busy, NULL, NULL, NULL, 1, K_INHERIT_PERMS,
+                  K_MSEC(2000));
+}
+
 void main(void) {
   printf("Welcome, %s!\n\n", CONFIG_BOARD);
 
-  main_fib_bench();
+  // main_fib_bench();
+  main_preempt();
 }
