@@ -1,0 +1,401 @@
+struct k_thread thread_00;
+K_THREAD_STACK_DEFINE(stack_00, 1024);
+
+struct k_thread thread_01;
+K_THREAD_STACK_DEFINE(stack_01, 1024);
+
+struct k_thread thread_02;
+K_THREAD_STACK_DEFINE(stack_02, 1024);
+
+struct k_thread thread_03;
+K_THREAD_STACK_DEFINE(stack_03, 1024);
+
+struct k_thread thread_04;
+K_THREAD_STACK_DEFINE(stack_04, 1024);
+
+struct k_thread thread_05;
+K_THREAD_STACK_DEFINE(stack_05, 1024);
+
+struct k_thread thread_06;
+K_THREAD_STACK_DEFINE(stack_06, 1024);
+
+struct k_thread thread_07;
+K_THREAD_STACK_DEFINE(stack_07, 1024);
+
+struct k_thread thread_08;
+K_THREAD_STACK_DEFINE(stack_08, 1024);
+
+struct k_thread thread_09;
+K_THREAD_STACK_DEFINE(stack_09, 1024);
+
+struct k_thread thread_10;
+K_THREAD_STACK_DEFINE(stack_10, 1024);
+
+struct k_thread thread_11;
+K_THREAD_STACK_DEFINE(stack_11, 1024);
+
+struct k_thread thread_12;
+K_THREAD_STACK_DEFINE(stack_12, 1024);
+
+struct k_thread thread_13;
+K_THREAD_STACK_DEFINE(stack_13, 1024);
+
+struct k_thread thread_14;
+K_THREAD_STACK_DEFINE(stack_14, 1024);
+
+struct k_thread thread_15;
+K_THREAD_STACK_DEFINE(stack_15, 1024);
+
+struct k_thread thread_16;
+K_THREAD_STACK_DEFINE(stack_16, 1024);
+
+struct k_thread thread_17;
+K_THREAD_STACK_DEFINE(stack_17, 1024);
+
+struct k_thread thread_18;
+K_THREAD_STACK_DEFINE(stack_18, 1024);
+
+struct k_thread thread_19;
+K_THREAD_STACK_DEFINE(stack_19, 1024);
+
+struct k_thread thread_20;
+K_THREAD_STACK_DEFINE(stack_20, 1024);
+
+struct k_thread thread_21;
+K_THREAD_STACK_DEFINE(stack_21, 1024);
+
+struct k_thread thread_22;
+K_THREAD_STACK_DEFINE(stack_22, 1024);
+
+struct k_thread thread_23;
+K_THREAD_STACK_DEFINE(stack_23, 1024);
+
+struct k_thread thread_24;
+K_THREAD_STACK_DEFINE(stack_24, 1024);
+
+struct k_thread thread_25;
+K_THREAD_STACK_DEFINE(stack_25, 1024);
+
+struct k_thread thread_26;
+K_THREAD_STACK_DEFINE(stack_26, 1024);
+
+struct k_thread thread_27;
+K_THREAD_STACK_DEFINE(stack_27, 1024);
+
+struct k_thread thread_28;
+K_THREAD_STACK_DEFINE(stack_28, 1024);
+
+struct k_thread thread_29;
+K_THREAD_STACK_DEFINE(stack_29, 1024);
+
+struct k_thread thread_30;
+K_THREAD_STACK_DEFINE(stack_30, 1024);
+
+struct k_thread thread_31;
+K_THREAD_STACK_DEFINE(stack_31, 1024);
+
+struct k_thread thread_32;
+K_THREAD_STACK_DEFINE(stack_32, 1024);
+
+struct k_thread thread_33;
+K_THREAD_STACK_DEFINE(stack_33, 1024);
+
+struct k_thread thread_34;
+K_THREAD_STACK_DEFINE(stack_34, 1024);
+
+struct k_thread thread_35;
+K_THREAD_STACK_DEFINE(stack_35, 1024);
+
+struct k_thread thread_36;
+K_THREAD_STACK_DEFINE(stack_36, 1024);
+
+struct k_thread thread_37;
+K_THREAD_STACK_DEFINE(stack_37, 1024);
+
+struct k_thread thread_38;
+K_THREAD_STACK_DEFINE(stack_38, 1024);
+
+struct k_thread thread_39;
+K_THREAD_STACK_DEFINE(stack_39, 1024);
+
+struct k_thread thread_40;
+K_THREAD_STACK_DEFINE(stack_40, 1024);
+
+struct k_thread thread_41;
+K_THREAD_STACK_DEFINE(stack_41, 1024);
+
+struct k_thread thread_42;
+K_THREAD_STACK_DEFINE(stack_42, 1024);
+
+struct k_thread thread_43;
+K_THREAD_STACK_DEFINE(stack_43, 1024);
+
+struct k_thread thread_44;
+K_THREAD_STACK_DEFINE(stack_44, 1024);
+
+struct k_thread thread_45;
+K_THREAD_STACK_DEFINE(stack_45, 1024);
+
+struct k_thread thread_46;
+K_THREAD_STACK_DEFINE(stack_46, 1024);
+
+struct k_thread thread_47;
+K_THREAD_STACK_DEFINE(stack_47, 1024);
+
+struct k_thread thread_48;
+K_THREAD_STACK_DEFINE(stack_48, 1024);
+
+struct k_thread thread_49;
+K_THREAD_STACK_DEFINE(stack_49, 1024);
+
+struct k_thread thread_50;
+K_THREAD_STACK_DEFINE(stack_50, 1024);
+
+struct k_thread thread_51;
+K_THREAD_STACK_DEFINE(stack_51, 1024);
+
+struct k_thread thread_52;
+K_THREAD_STACK_DEFINE(stack_52, 1024);
+
+struct k_thread thread_53;
+K_THREAD_STACK_DEFINE(stack_53, 1024);
+
+struct k_thread thread_54;
+K_THREAD_STACK_DEFINE(stack_54, 1024);
+
+struct k_thread thread_55;
+K_THREAD_STACK_DEFINE(stack_55, 1024);
+
+struct k_thread thread_56;
+K_THREAD_STACK_DEFINE(stack_56, 1024);
+
+struct k_thread thread_57;
+K_THREAD_STACK_DEFINE(stack_57, 1024);
+
+struct k_thread thread_58;
+K_THREAD_STACK_DEFINE(stack_58, 1024);
+
+struct k_thread thread_59;
+K_THREAD_STACK_DEFINE(stack_59, 1024);
+
+struct k_thread thread_60;
+K_THREAD_STACK_DEFINE(stack_60, 1024);
+
+struct k_thread thread_61;
+K_THREAD_STACK_DEFINE(stack_61, 1024);
+
+struct k_thread thread_62;
+K_THREAD_STACK_DEFINE(stack_62, 1024);
+
+struct k_thread thread_63;
+K_THREAD_STACK_DEFINE(stack_63, 1024);
+
+struct k_thread thread_64;
+K_THREAD_STACK_DEFINE(stack_64, 1024);
+
+struct k_thread thread_65;
+K_THREAD_STACK_DEFINE(stack_65, 1024);
+
+struct k_thread thread_66;
+K_THREAD_STACK_DEFINE(stack_66, 1024);
+
+struct k_thread thread_67;
+K_THREAD_STACK_DEFINE(stack_67, 1024);
+
+struct k_thread thread_68;
+K_THREAD_STACK_DEFINE(stack_68, 1024);
+
+struct k_thread thread_69;
+K_THREAD_STACK_DEFINE(stack_69, 1024);
+
+struct k_thread thread_70;
+K_THREAD_STACK_DEFINE(stack_70, 1024);
+
+struct k_thread thread_71;
+K_THREAD_STACK_DEFINE(stack_71, 1024);
+
+struct k_thread thread_72;
+K_THREAD_STACK_DEFINE(stack_72, 1024);
+
+struct k_thread thread_73;
+K_THREAD_STACK_DEFINE(stack_73, 1024);
+
+struct k_thread thread_74;
+K_THREAD_STACK_DEFINE(stack_74, 1024);
+
+struct k_thread thread_75;
+K_THREAD_STACK_DEFINE(stack_75, 1024);
+
+struct k_thread thread_76;
+K_THREAD_STACK_DEFINE(stack_76, 1024);
+
+struct k_thread thread_77;
+K_THREAD_STACK_DEFINE(stack_77, 1024);
+
+struct k_thread thread_78;
+K_THREAD_STACK_DEFINE(stack_78, 1024);
+
+struct k_thread thread_79;
+K_THREAD_STACK_DEFINE(stack_79, 1024);
+
+struct k_thread thread_80;
+K_THREAD_STACK_DEFINE(stack_80, 1024);
+
+struct k_thread thread_81;
+K_THREAD_STACK_DEFINE(stack_81, 1024);
+
+struct k_thread thread_82;
+K_THREAD_STACK_DEFINE(stack_82, 1024);
+
+struct k_thread thread_83;
+K_THREAD_STACK_DEFINE(stack_83, 1024);
+
+struct k_thread thread_84;
+K_THREAD_STACK_DEFINE(stack_84, 1024);
+
+struct k_thread thread_85;
+K_THREAD_STACK_DEFINE(stack_85, 1024);
+
+struct k_thread thread_86;
+K_THREAD_STACK_DEFINE(stack_86, 1024);
+
+struct k_thread thread_87;
+K_THREAD_STACK_DEFINE(stack_87, 1024);
+
+struct k_thread thread_88;
+K_THREAD_STACK_DEFINE(stack_88, 1024);
+
+struct k_thread thread_89;
+K_THREAD_STACK_DEFINE(stack_89, 1024);
+
+struct k_thread thread_90;
+K_THREAD_STACK_DEFINE(stack_90, 1024);
+
+struct k_thread thread_91;
+K_THREAD_STACK_DEFINE(stack_91, 1024);
+
+struct k_thread thread_92;
+K_THREAD_STACK_DEFINE(stack_92, 1024);
+
+struct k_thread thread_93;
+K_THREAD_STACK_DEFINE(stack_93, 1024);
+
+struct k_thread thread_94;
+K_THREAD_STACK_DEFINE(stack_94, 1024);
+
+struct k_thread thread_95;
+K_THREAD_STACK_DEFINE(stack_95, 1024);
+
+struct k_thread thread_96;
+K_THREAD_STACK_DEFINE(stack_96, 1024);
+
+struct k_thread thread_97;
+K_THREAD_STACK_DEFINE(stack_97, 1024);
+
+struct k_thread thread_98;
+K_THREAD_STACK_DEFINE(stack_98, 1024);
+
+struct k_thread thread_99;
+K_THREAD_STACK_DEFINE(stack_99, 1024);
+
+void spawn_many_tasks() {
+    k_thread_create(&thread_01, stack_01, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_02, stack_02, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_03, stack_03, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_04, stack_04, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_05, stack_05, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_06, stack_06, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_07, stack_07, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_08, stack_08, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_09, stack_09, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_10, stack_10, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_11, stack_11, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_12, stack_12, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_13, stack_13, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_14, stack_14, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_15, stack_15, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_16, stack_16, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_17, stack_17, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_18, stack_18, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_19, stack_19, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_20, stack_20, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_21, stack_21, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_22, stack_22, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_23, stack_23, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_24, stack_24, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_25, stack_25, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_26, stack_26, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_27, stack_27, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_28, stack_28, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_29, stack_29, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_30, stack_30, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_31, stack_31, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_32, stack_32, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_33, stack_33, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_34, stack_34, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_35, stack_35, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_36, stack_36, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_37, stack_37, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_38, stack_38, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_39, stack_39, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_40, stack_40, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_41, stack_41, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_42, stack_42, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_43, stack_43, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_44, stack_44, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_45, stack_45, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_46, stack_46, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_47, stack_47, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_48, stack_48, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_49, stack_49, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_50, stack_50, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_51, stack_51, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_52, stack_52, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_53, stack_53, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_54, stack_54, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_55, stack_55, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_56, stack_56, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_57, stack_57, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_58, stack_58, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_59, stack_59, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_60, stack_60, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_61, stack_61, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_62, stack_62, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_63, stack_63, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_64, stack_64, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_65, stack_65, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_66, stack_66, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_67, stack_67, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_68, stack_68, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_69, stack_69, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_70, stack_70, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_71, stack_71, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_72, stack_72, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_73, stack_73, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_74, stack_74, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_75, stack_75, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_76, stack_76, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_77, stack_77, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_78, stack_78, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_79, stack_79, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_80, stack_80, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_81, stack_81, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_82, stack_82, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_83, stack_83, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_84, stack_84, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_85, stack_85, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_86, stack_86, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_87, stack_87, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_88, stack_88, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_89, stack_89, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_90, stack_90, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_91, stack_91, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_92, stack_92, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_93, stack_93, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_94, stack_94, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_95, stack_95, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_96, stack_96, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_97, stack_97, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_98, stack_98, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+    k_thread_create(&thread_99, stack_99, 1024, thread_function_always_yield, NULL, NULL, NULL, 1, K_USER, K_NO_WAIT);
+}
