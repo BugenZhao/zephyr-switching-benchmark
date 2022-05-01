@@ -20,7 +20,9 @@ void many_tasks() {
   k_sched_time_slice_set(10, 1);
   printf("test with many tasks\n");
 
-  spawn_many_tasks();
+  // bool user = false;
+
+  spawn_many_tasks(true);
 
   do_bench(true, &thread_00, stack_00, sizeof(stack_00),
            thread_function_busy_work, 1, 5);

@@ -20,18 +20,25 @@ K_THREAD_STACK_DEFINE(thread_2_stack, THREAD_STACKSIZE);
 void bench(bool user, k_thread_entry_t func, int times) {
   do_bench(user, &thread, thread_stack, THREAD_STACKSIZE, func, -1, times);
 }
-
 void main_fib_bench() {
   const int BENCH_TIMES = 3;
 
+  k_object_access_all_grant(&fib_k_sem);
+
   for (int i = 0; i < 2; i++) {
     bool user = i % 2 == 0;
-    bench(user, thread_function_fib_with_sem, BENCH_TIMES);
+
+    bench(user, thread_function_fib_only, BENCH_TIMES);
     if (!user) {
       bench(user, thread_function_fib_with_xip_clear, BENCH_TIMES);
     }
-    bench(user, thread_function_fib_only, BENCH_TIMES);
-    bench(user, thread_function_sem_only, BENCH_TIMES);
+
+    // bench(user, thread_function_fib_with_k_sem, BENCH_TIMES);
+    // bench(user, thread_function_k_sem_only, BENCH_TIMES);
+    // bench(user, thread_function_fib_with_sys_sem, BENCH_TIMES);
+
+    bench(user, thread_function_fib_with_thread_get, BENCH_TIMES);
+    bench(user, thread_function_thread_get_only, BENCH_TIMES);
 
     k_msleep(1000);
   }
