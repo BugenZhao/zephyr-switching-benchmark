@@ -73,8 +73,8 @@ void main_user_blinky() {
 void main(void) {
   printf("Welcome, %s!\n\n", CONFIG_BOARD);
 
-  main_fib_bench();
+  // main_fib_bench();
   // main_preempt();
   // main_user_blinky();
-  // many_tasks();
+  many_tasks();
 }
