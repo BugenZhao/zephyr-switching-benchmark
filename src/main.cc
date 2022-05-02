@@ -30,7 +30,7 @@ void main_fib_bench() {
 
     bench(user, thread_function_fib_only, BENCH_TIMES);
     if (!user) {
-      bench(user, thread_function_fib_with_xip_clear, BENCH_TIMES);
+      bench(user, thread_function_fib_with_thread_get_xip_clear, BENCH_TIMES);
     }
 
     // bench(user, thread_function_fib_with_k_sem, BENCH_TIMES);

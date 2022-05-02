@@ -34,6 +34,8 @@ void thread_function_fib_with_k_sem(void* p1, void* p2, void* p3) {
          k_sem_count_get(&fib_k_sem));
 }
 
+#ifdef CONFIG_USERSPACE
+
 void thread_function_fib_with_sys_sem(void* p1, void* p2, void* p3) {
   print_current();
 
@@ -57,31 +59,13 @@ void thread_function_fib_with_sys_sem(void* p1, void* p2, void* p3) {
          sys_sem_count_get(&sem));
 }
 
-void thread_function_fib_with_xip_clear(void* p1, void* p2, void* p3) {
-  print_current();
-
-  const int len = FIB_LEN;
-  uint32_t fib[len];
-  fib[0] = 0;
-  fib[1] = 1;
-
-  register int i = 2;
-loop:
-  for (; i < FIB_LOOP; ++i) {
-    fib[i % len] = fib[(i + len - 1) % len] + fib[(i + len - 2) % len];
-
-    if (i % SYSCALL_STEP == 0) {
-      clear_xip_cache();
-    }
-  }
-loop_end:
-
-  printf("done, fib[i] = %u\n", fib[i % len]);
-}
+#endif
 
 void thread_function_fib_only(void* p1, void* p2, void* p3) {
   print_current();
 
+  register k_tid_t tid = NULL;
+
   const int len = FIB_LEN;
   uint32_t fib[len];
   fib[0] = 0;
@@ -90,9 +74,13 @@ void thread_function_fib_only(void* p1, void* p2, void* p3) {
   register int i = 2;
   for (; i < FIB_LOOP; ++i) {
     fib[i % len] = fib[(i + len - 1) % len] + fib[(i + len - 2) % len];
+
+    if (i % SYSCALL_STEP == 0) {
+      tid = (k_tid_t)i;
+    }
   }
 
-  printf("done, fib[i] = %u\n", fib[i % len]);
+  printf("done, fib[i] = %u, tid = %p\n", fib[i % len], tid);
 }
 
 void thread_function_k_sem_only(void* p1, void* p2, void* p3) {
@@ -125,6 +113,29 @@ void thread_function_fib_with_thread_get(void* p1, void* p2, void* p3) {
 
     if (i % SYSCALL_STEP == 0) {
       tid = k_current_get();
+    }
+  }
+
+  printf("done, fib[i] = %u, tid = %p\n", fib[i % len], tid);
+}
+
+void thread_function_fib_with_thread_get_xip_clear(void* p1, void* p2, void* p3) {
+  print_current();
+
+  register k_tid_t tid = NULL;
+
+  const int len = FIB_LEN;
+  uint32_t fib[len];
+  fib[0] = 0;
+  fib[1] = 1;
+
+  register int i = 2;
+  for (; i < FIB_LOOP; ++i) {
+    fib[i % len] = fib[(i + len - 1) % len] + fib[(i + len - 2) % len];
+
+    if (i % SYSCALL_STEP == 0) {
+      tid = k_current_get();
+      clear_xip_cache();
     }
   }
 
