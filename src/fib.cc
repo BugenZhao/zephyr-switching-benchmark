@@ -34,12 +34,16 @@ void thread_function_fib_with_k_sem(void* p1, void* p2, void* p3) {
          k_sem_count_get(&fib_k_sem));
 }
 
-#ifdef CONFIG_USERSPACE
+#ifndef CONFIG_USERSPACE
+SYS_SEM_DEFINE(sem, 0, SEM_LIMIT);
+#endif
 
 void thread_function_fib_with_sys_sem(void* p1, void* p2, void* p3) {
   print_current();
 
+#ifdef CONFIG_USERSPACE
   SYS_SEM_DEFINE(sem, 0, SEM_LIMIT);
+#endif
 
   const int len = FIB_LEN;
   uint32_t fib[len];
@@ -58,8 +62,6 @@ void thread_function_fib_with_sys_sem(void* p1, void* p2, void* p3) {
   printf("done, fib[i] = %u, sem value = %u\n", fib[i % len],
          sys_sem_count_get(&sem));
 }
-
-#endif
 
 void thread_function_fib_only(void* p1, void* p2, void* p3) {
   print_current();
@@ -119,7 +121,9 @@ void thread_function_fib_with_thread_get(void* p1, void* p2, void* p3) {
   printf("done, fib[i] = %u, tid = %p\n", fib[i % len], tid);
 }
 
-void thread_function_fib_with_thread_get_xip_clear(void* p1, void* p2, void* p3) {
+void thread_function_fib_with_thread_get_xip_clear(void* p1,
+                                                   void* p2,
+                                                   void* p3) {
   print_current();
 
   register k_tid_t tid = NULL;

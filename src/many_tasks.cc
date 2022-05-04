@@ -1,13 +1,15 @@
 #include "many_tasks.h"
 #include <stdio.h>
 #include <zephyr.h>
+#include <zephyr/app_memory/app_memdomain.h>
 #include "common.h"
 #include "fib.h"
 
-#define MANY_TASKS_YIELD_COUNT
+// #define MANY_TASKS_YIELD_COUNT
 
 #ifdef MANY_TASKS_YIELD_COUNT
-uint32_t yield_count = 0;
+K_APPMEM_PARTITION_DEFINE(my_partition);
+K_APP_BMEM(my_partition) uint32_t yield_count = 0;
 #endif
 
 void thread_function_always_yield(void* p1, void* p2, void* p3) {
@@ -32,6 +34,14 @@ void thread_function_busy_work(void* p1, void* p2, void* p3) {
 #include "spawn.cc.gen"
 
 void many_tasks() {
+#ifdef MANY_TASKS_YIELD_COUNT
+  k_mem_domain domain;
+  k_mem_partition* parts[] = {&my_partition};
+  k_mem_domain_init(&domain, ARRAY_SIZE(parts), parts);
+
+  k_mem_domain_add_thread(&domain, k_current_get());
+#endif
+
   k_sched_time_slice_set(10, 1);
   printf("test with many tasks\n");
 
