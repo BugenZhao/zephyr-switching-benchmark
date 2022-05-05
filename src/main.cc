@@ -5,6 +5,7 @@
 #include "common.h"
 #include "fib.h"
 #include "many_tasks.h"
+#include "mutex.h"
 #include "preempt.h"
 #include "user_blinky.h"
 #include "xip.h"
@@ -74,8 +75,10 @@ void main_user_blinky() {
 void main(void) {
   printf("Welcome, %s!\n\n", CONFIG_BOARD);
 
-  main_fib_bench();
+  // main_fib_bench();
   // main_preempt();
   // main_user_blinky();
   // many_tasks();
+  mutex_bench();
+  // mutex_test();
 }
