@@ -4,7 +4,7 @@
 // #define MY_MUTEX_LOG
 
 #ifdef MY_MUTEX_LOG
-#define mutex_log(fmt, ...) printf(fmt, ##__VA_ARGS__)
+#define mutex_log(fmt, ...) printf("" fmt, ##__VA_ARGS__)
 #else
 #define mutex_log(fmt, ...)
 #endif

@@ -56,6 +56,8 @@ void main_preempt() {
                   K_MSEC(2000));
 }
 
+#ifdef CONFIG_BOARD_RPI_PICO
+
 K_SEM_DEFINE(blinky_sem, 0, 1);
 void main_user_blinky() {
   static const struct gpio_dt_spec led =
@@ -71,6 +73,8 @@ void main_user_blinky() {
                   thread_function_user_give_sem, &blinky_sem, NULL, NULL, 1,
                   K_USER, K_MSEC(2000));
 }
+
+#endif
 
 void main(void) {
   printf("Welcome, %s!\n\n", CONFIG_BOARD);

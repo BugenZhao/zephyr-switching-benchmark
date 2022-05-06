@@ -4,6 +4,8 @@
 #include <zephyr.h>
 
 void thread_function_blinky(void* p1, void* p2, void* p3) {
+#ifdef CONFIG_BOARD_RPI_PICO
+
   static const struct gpio_dt_spec led =
       GPIO_DT_SPEC_GET(DT_ALIAS(led0), gpios);
 
@@ -20,6 +22,8 @@ void thread_function_blinky(void* p1, void* p2, void* p3) {
     printf("led toggle\n");
     k_msleep(250);
   }
+
+#endif
 }
 
 void thread_function_busy(void* p1, void* p2, void* p3) {
