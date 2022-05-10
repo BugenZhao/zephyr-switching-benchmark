@@ -71,7 +71,6 @@ void thread_function_no_mutex(void* p1, void* p2, void* p3) {
   print_current();
   counter = 0;
 
-  int ret;
   bool end = false;
 
   register auto tid = k_current_get();

@@ -9,6 +9,7 @@
 #include "preempt.h"
 #include "user_blinky.h"
 #include "xip.h"
+#include "user_test.h"
 
 #define THREAD_STACKSIZE 2048
 
@@ -83,6 +84,7 @@ void main(void) {
   // main_preempt();
   // main_user_blinky();
   // many_tasks();
-  mutex_bench();
+  // mutex_bench();
   // mutex_test();
+  user_test();
 }
