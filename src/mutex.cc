@@ -20,7 +20,11 @@ void thread_function_sys_mutex(void* p1, void* p2, void* p3) {
   int ret;
   bool end = false;
 
-  register auto tid = k_current_get();
+#ifdef CONFIG_THREAD_LOCAL_STORAGE
+  register k_tid_t tid = 0;
+#else
+  register k_tid_t tid = k_current_get();
+#endif
 
   while (true) {
     ret = sys_mutex_lock(&counter_sys_mutex, K_FOREVER);
@@ -47,16 +51,28 @@ void thread_function_my_mutex(void* p1, void* p2, void* p3) {
   int ret;
   bool end = false;
 
-  register auto tid = k_current_get();
+#ifdef CONFIG_THREAD_LOCAL_STORAGE
+  register k_tid_t tid = 0;
+#else
+  register k_tid_t tid = k_current_get();
+#endif
 
   while (true) {
+#ifdef CONFIG_THREAD_LOCAL_STORAGE
+    ret = my_mutex_lock(&counter_my_mutex, K_FOREVER);
+#else
     ret = my_mutex_lock(&counter_my_mutex, tid, K_FOREVER);
+#endif
     // __ASSERT(ret == 0, "failed to lock mutex");
 
     counter += 1;
     end = counter >= LOCK_TIMES;
 
+#ifdef CONFIG_THREAD_LOCAL_STORAGE
+    ret = my_mutex_unlock(&counter_my_mutex);
+#else
     ret = my_mutex_unlock(&counter_my_mutex, tid);
+#endif
     // __ASSERT(ret == 0, "failed to unlock mutex");
 
     if (unlikely(end)) {
@@ -73,7 +89,11 @@ void thread_function_no_mutex(void* p1, void* p2, void* p3) {
 
   bool end = false;
 
-  register auto tid = k_current_get();
+#ifdef CONFIG_THREAD_LOCAL_STORAGE
+  register k_tid_t tid = 0;
+#else
+  register k_tid_t tid = k_current_get();
+#endif
 
   while (true) {
     counter += 1;
@@ -137,18 +157,18 @@ void mutex_bench() {
 
   configure_domain();
 
-  do_bench(true, &mutex_thread_98, mutex_stack_98, 1024,
+  do_bench(false, &mutex_thread_98, mutex_stack_98, 1024,
            thread_function_no_mutex, -1, times);
-  do_bench(false, &mutex_thread_99, mutex_stack_99, 1024,
+  do_bench(true, &mutex_thread_99, mutex_stack_99, 1024,
            thread_function_no_mutex, -1, times);
 
-  do_bench(true, &mutex_thread_00, mutex_stack_00, 1024,
+  do_bench(false, &mutex_thread_00, mutex_stack_00, 1024,
            thread_function_my_mutex, -1, times);
-  do_bench(true, &mutex_thread_01, mutex_stack_01, 1024,
+  do_bench(false, &mutex_thread_01, mutex_stack_01, 1024,
            thread_function_sys_mutex, -1, times);
-  do_bench(false, &mutex_thread_02, mutex_stack_02, 1024,
+  do_bench(true, &mutex_thread_02, mutex_stack_02, 1024,
            thread_function_my_mutex, -1, times);
-  do_bench(false, &mutex_thread_03, mutex_stack_03, 1024,
+  do_bench(true, &mutex_thread_03, mutex_stack_03, 1024,
            thread_function_sys_mutex, -1, times);
 }
 

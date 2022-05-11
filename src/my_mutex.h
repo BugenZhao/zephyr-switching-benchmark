@@ -18,4 +18,16 @@ int my_mutex_lock(struct my_mutex* mutex, k_tid_t tid, k_timeout_t timeout);
 
 int my_mutex_unlock(struct my_mutex* mutex, k_tid_t tid);
 
+#ifdef CONFIG_THREAD_LOCAL_STORAGE
+
+inline int my_mutex_lock(struct my_mutex* mutex, k_timeout_t timeout) {
+  return my_mutex_lock(mutex, k_current_get(), timeout);
+}
+
+inline int my_mutex_unlock(struct my_mutex* mutex) {
+  return my_mutex_unlock(mutex, k_current_get());
+}
+
+#endif
+
 #endif

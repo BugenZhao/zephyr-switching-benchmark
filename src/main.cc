@@ -84,7 +84,7 @@ void main(void) {
   // main_preempt();
   // main_user_blinky();
   // many_tasks();
-  // mutex_bench();
+  mutex_bench();
   // mutex_test();
-  user_test();
+  // user_test();
 }
